@@ -1,0 +1,88 @@
+
+<!doctype html>
+<html lang="en">
+    
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Politika</title>
+ </head>
+
+   <body>
+    <style>
+    body {
+        font-family: Verdana, monospace, sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: justify;
+        margin-top: 20px;
+        padding-left: 50px;
+        padding-bottom: 20px;
+  
+        background-color: white;
+        border-radius: 0.25rem;
+        
+    }
+    button {
+     background-color: #4CAF50; /* Green */
+     border: none;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+  }
+ 
+     </style>
+     <div class="body">
+       <form method="POST" action="/prosedur">
+        {% csrf_token %}
+     
+         {{form2.media}}
+   
+        <div>
+            <br>
+            <p>
+                <h3>Enter Details</h3>
+            </p>
+            <div>
+                <p>Başlık:</p>{{ form2.baslik }}
+            </div>
+            <div>
+                <p>Amaç:</p>{{ form2.amac }}
+            </div>
+            <div>
+                <p>Kapsam:</p>{{ form2.kapsam }}
+            </div>
+            <div>
+                <p>Tanımlar:</p>{{ form2.tanimlar }}
+            </div>
+            <div>
+                <p>Referanslar:</p>{{ form2.referanslar }}
+            </div>
+            <div>
+                <p>Uygulama:</p>{{ form2.uygulama }}
+            </div>
+            <div>
+                <p>Sorumluluk:</p>{{ form2.sorumluluk }}
+            </div>
+            <div>
+                <p>Kontrol:</p>{{ form2.kontrol }}
+            </div>
+            <div>
+                <p>Ekler:</p>{{ form2.ekler }}
+            </div>
+            <div>
+                <br>
+                
+                <button type="submit" class="button">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+   </body>
+
+  
+   </html>

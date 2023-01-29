@@ -1,0 +1,38 @@
+from django.urls import path
+from . import views
+
+urlpatterns= [
+    path('',views.index, name='index'),
+    path('politika',views.politika, name='politika'),
+    path('prosedur',views.prosedur, name='prosedur'),
+    path('talimat',views.talimat, name='talimat'),
+    path('form',views.form, name='form'),
+    path('tablo',views.tablo, name='tablo'),
+    path('liste',views.liste, name='liste'),
+    path('show',views.show, name='show'),
+    path('destroy_politika/<int:id>', views.destroy_politika),  
+    path('destroy_prosedur/<int:id>', views.destroy_prosedur),
+    path('destroy_form/<int:id>', views.destroy_form),
+    path('destroy_liste/<int:id>', views.destroy_liste),
+    path('destroy_tablo/<int:id>', views.destroy_tablo),
+    path('destroy_talimat/<int:id>', views.destroy_talimat),
+    path('show_politika/<int:id>',views.show_politika, name='show_politika'),
+    path('show_prosedur/<int:id>',views.show_prosedur, name='show_prosedur'),
+    path('show_talimat/<int:id>',views.show_talimat, name='show_talimat'),
+    path('show_form/<int:id>',views.show_form, name='show_form'),
+    path('show_tablo/<int:id>',views.show_tablo, name='show_tablo'),
+    path('show_liste/<int:id>',views.show_liste, name='show_liste'),
+    path('show_politika/<int:id>/pdf',views.politika_pdf,name="show_politika_pdf"),
+    path('show_prosedur/<int:id>/pdf',views.prosedur_pdf,name="show_prosedur_pdf"),
+    path('show_form/<int:id>/pdf',views.form_pdf,name="show_form_pdf"),
+    path('show_talimat/<int:id>/pdf',views.talimat_pdf,name="show_talimat_pdf"),
+    path('show_tablo/<int:id>/pdf',views.tablo_pdf,name="show_tablo_pdf"),
+    path('show_liste/<int:id>/pdf',views.liste_pdf,name="show_liste_pdf"),
+    path('update_politika/edit/<int:id>',views.update_politika),
+    path('update_prosedur/edit/<int:id>',views.update_prosedur),
+    path('update_form/edit/<int:id>',views.update_form),
+    path('update_liste/edit/<int:id>',views.update_liste),
+    path('update_tablo/edit/<int:id>',views.update_tablo),
+    path('update_talimat/edit/<int:id>',views.update_talimat),
+
+]

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Listeler</title>
+ </head>
+
+   <body>
+    <style>
+    body {
+        font-family: Verdana, monospace, sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: justify;
+        margin-top: 20px;
+        padding-left: 50px;
+        padding-bottom: 20px;
+  
+        background-color: white;
+        border-radius: 0.25rem;
+        
+    }
+    button {
+     background-color: #4CAF50; /* Green */
+     border: none;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+  }
+ 
+     </style>
+     <div class="body">
+       <form method="POST" action="/liste">
+        {% csrf_token %}
+     
+         {{form6.media}}
+   
+        <div>
+            <br>
+            <p>
+                <h3>Enter Details</h3>
+            </p>
+            <div>
+              <p>Başlık:</p>
+              <input type="text" name="baslik" size="40" value="{{form6.baslik.value}}">
+            </div>
+            <div>
+                <p>Liste:</p>{{ form6.liste }}
+            </div>
+                <br>
+                
+                <button type="submit" class="button">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+   </body>
+
+  
+   </html>

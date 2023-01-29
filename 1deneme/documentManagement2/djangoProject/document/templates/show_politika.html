@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Document Management System</title>
+  </head>
+  <body>
+
+
+  <style>
+    body {
+      font-family: Verdana, monospace, sans-serif;
+      font-size: 25px;
+    
+      text-align: justify;
+      margin-top: 40px;
+      padding-left: 50px;
+      padding-bottom: 20px;    
+  }
+  </style>
+
+     <div class="body">
+ 
+    <h2>{{ politika.baslik|striptags}}</h2>
+    
+
+    {% if download != "true" %}
+    <div style="position: absolute; top: 25px; right: 10px;">
+      <a class="btn btn-info" href="{{politika.id}}/pdf" target="_blank">Download</a>
+    </div>
+    {% endif %}
+    {% if download == "true" %}
+    <p style="font-size: 12px; text-align: right; padding-right: 10px;margin-top: 20px;">Yüklenme Tarihi: {{politika.upload_date}}</p>
+     
+    <p style="font-size: 12px; text-align: right; padding-right: 10px;margin-top: 20px;">Revizyon Tarihi: {{politika.revision_date}}</p>
+
+    <p style="font-size: 12px; text-align: right; padding-right: 10px;margin-top: 20px;">Revizyon Numarası: {{politika.revision_number}}</p>
+
+     {% endif %}
+    <p style="  font-weight: bold;">Amaç: {{politika.amac|striptags}}</p>
+     </br></br>
+     <p style="  font-weight: bold;">Kapsam: {{politika.kapsam|striptags}}</p>
+    </br></br>
+    <p style="  font-weight: bold;">Tanımlar: {{politika.tanimlar|striptags}}</p>
+    </br></br>
+    <p style="  font-weight: bold;">Referanslar: {{politika.referanslar|striptags}}</p>
+    </br></br>
+    <p style="  font-weight: bold;">Uygulama: {{politika.uygulama|striptags}}</p>
+    </br></br>
+    <p style="  font-weight: bold;">Sorumluluk: {{politika.sorumluluk|striptags}}</p>
+    </br></br>
+    <p style="  font-weight: bold;">Kontrol: {{politika.kontrol|striptags}}</p>
+    </br></br>
+    <p style="  font-weight: bold;">Ekler: {{politika.ekler|striptags}}</p>
+    </br></br>
+    
+
+  
+</div>
+
+  </body>
+</html>
